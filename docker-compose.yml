@@ -1,0 +1,36 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root-password
+      MYSQL_DATABASE: db_moria
+      MYSQL_USER: db_mori
+      MYSQL_PASSWORD: 1234a
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8090:80"
+    depends_on:
+      - db
+    links:
+      - db
+    command: "apache2-foreground"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+    ports:
+      - "8091:80"
+    depends_on:
+      - db
+    links:
+      - db

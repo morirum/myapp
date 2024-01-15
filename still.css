@@ -1,0 +1,91 @@
+* {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  h1 {
+    font-size: 36px;
+    color: #333;
+  }
+  
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  
+  #baslik {
+    font-size: 48px;
+    font-weight: bold;
+    color: #0077b6;
+  }
+  .metin {
+    text-align: center; 
+    line-height: 10px; 
+}
+
+
+.kutu
+{
+  width: 100;
+  height: 100px;
+  margin: 10px;
+
+}
+.sayfadivi
+{
+  display: flex;
+}
+.search-box
+{
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+
+  
+}
+
+.search-box input 
+{
+  width: 250px; 
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.search-box button {
+  padding: 8px 12px;
+  background-color: #b767ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 4px;
+  width: 100px;
+}
+.user-actions {
+  display: flex;
+  justify-content: flex-end; 
+  margin-left: auto; 
+  padding: 10px;
+  align-items: right;
+  position: absolute;
+  right: 0;
+}
+
+.navbar-nav
+{
+  display: flex;
+}
+.nav-item {
+  margin-left: 10px;
+}
+
+
+
+
+
